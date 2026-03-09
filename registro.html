@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Estudiantes</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        form { max-width: 400px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        div { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; }
+        input[type="text"], input[type="email"], select { width: 100%; padding: 8px; margin-top: 5px; }
+        .radio-group { margin-top: 5px; }
+    </style>
+</head>
+<body>
+<h2>Formulario de Nuevo Ingreso</h2>
+<form action="procesar.php" method="POST">
+    <div>
+        <label>Nombre completo:</label>
+        <input type="text" name="nombre" required>
+    </div>
+
+    <div>
+        <label>Número de Control:</label>
+        <input type="text" name="n_control" pattern="[A-Za-z0-9]+" title="Se permiten números y letras (ej: L19120001)" required>
+    </div>
+
+    <div>
+        <label>Carrera:</label>
+        <select name="carrera" required>
+            <option value="">Seleccione una opción</option>
+            <option value="Ing. Sistemas">Ing. Sistemas</option>
+            <option value="Ing. Industrial">Ing. Industrial</option>
+            <option value="Ing. Gestión Empresarial">Ing. Gestión Empresarial</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Semestre:</label>
+        <div class="radio-group">
+            <input type="radio" name="semestre" value="1" required> 1
+            <input type="radio" name="semestre" value="2"> 2
+            <input type="radio" name="semestre" value="3"> 3
+            <input type="radio" name="semestre" value="4"> 4
+            <input type="radio" name="semestre" value="5"> 5
+            <input type="radio" name="semestre" value="6"> 6 <br>
+            <input type="radio" name="semestre" value="7"> 7
+            <input type="radio" name="semestre" value="8"> 8
+            <input type="radio" name="semestre" value="9"> 9
+            <input type="radio" name="semestre" value="10"> 10
+            <input type="radio" name="semestre" value="11"> 11
+            <input type="radio" name="semestre" value="12"> 12
+        </div>
+    </div>
+
+    <div>
+        <label>Correo Institucional:</label>
+        <input type="email" name="correo" required>
+    </div>
+
+    <button type="submit">Registrar Alumno</button>
+</form>
+</body>
+</html>
