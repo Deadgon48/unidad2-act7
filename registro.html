@@ -16,17 +16,17 @@
 <h2>Formulario de Nuevo Ingreso</h2>
 <form action="procesar.php" method="POST">
     <div>
-        <label>Nombre completo:</label>
-        <input type="text" name="nombre" required>
+        <label>Ingrese su nombre completo</label>
+        <input type="text" name="nombre" pattern="[A-Za-z\s]+" title="Solo letras" required>
     </div>
 
     <div>
-        <label>Número de Control:</label>
+        <label>Ingrese su número de control</label>
         <input type="text" name="n_control" pattern="[A-Za-z0-9]+" title="Se permiten números y letras (ej: L19120001)" required>
     </div>
 
     <div>
-        <label>Carrera:</label>
+        <label>Ingrese la carrera que desea cursar o esta cursando</label>
         <select name="carrera" required>
             <option value="">Seleccione una opción</option>
             <option value="Ing. Sistemas">Ing. Sistemas</option>
@@ -36,7 +36,7 @@
     </div>
 
     <div>
-        <label>Semestre:</label>
+        <label>Ingrese su semestre</label>
         <div class="radio-group">
             <input type="radio" name="semestre" value="1" required> 1
             <input type="radio" name="semestre" value="2"> 2
@@ -54,7 +54,7 @@
     </div>
 
     <div>
-        <label>Correo Institucional:</label>
+        <label>Ingrese su correo institucional</label>
         <input type="email" name="correo" required>
     </div>
 
