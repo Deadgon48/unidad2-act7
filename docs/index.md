@@ -15,4 +15,13 @@ graph TD
     User -->|Llena formulario| Web
     Web -->|Envía datos validados| User
     Web -.->|Provee información de nuevo ingreso| ControlEscolar
-    
+
+```  
+
+Secciones
+
+Diccionario de datos:
+https://deadgon48.github.io/unidad2-act7/datos
+
+Guía de Despliegue:
+https://deadgon48.github.io/unidad2-act7/despliege
