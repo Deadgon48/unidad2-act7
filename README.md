@@ -5,15 +5,15 @@ Permite la recolección de información personal, académica y de contacto de fo
 una arquitectura Cliente-Servidor básica.
 
 ## Funcionalidades
-- **Interfaz de Captura:** Formulario en HTML5 con validaciones de tipo y patrón.
-- **Procesamiento en Servidor:** Script en PHP para la recepción y visualización de datos mediante `$_POST`.
-- **Lógica de Negocio:** Mensajes de bienvenida personalizados según la carrera, seleccionada, en este caso solo la de sistemas.
-- **Visualización:** Generación de tablas con el resumen de la información capturada.
+- **Interfaz de Captura:** Formulario en HTML5 con validaciones de tipo, patrón y longitud.
+- **Procesamiento Dinámico:** Lógica programada en JavaScript para permitir el despliegue en servidores estáticos (GitHub Pages).
+- **Lógica de Negocio:** Mensajes de bienvenida personalizados según la carrera seleccionada (Especial para Ing. Sistemas).
+- **Visualización:** Generación automática de tablas con el resumen de la información capturada sin recargar la página.
 
 ## Stack Tecnológico
 - **Frontend:** HTML5 / CSS3
-- **Backend:** PHP 8.x
-- **Arquitectura:** Modelo C4 (Documentación automatizada)
+- **Lógica de Procesamiento:** JavaScript (ES6+)
+- **Documentación:** Markdowns de diagrama C4, Diccionario de Datos y de despliege
 
 ## Documentación Técnica (Arquitectura como Código)
 La arquitectura del sistema, el diccionario de datos y la guía de despliegue 
@@ -24,7 +24,6 @@ la cual se actualiza automáticamente mediante un Pipeline.
 
 ## Estructura del Repositorio
 - `registro.html`: Formulario de entrada.
-- `procesar.php`: Lógica de procesamiento de datos.
 - `/docs`: Archivos fuente de la documentación (Markdown y uno con codigo Mermaid).
 - `.github/workflows/deploy.yaml`: Configuración de la automatización del despliegue.
 

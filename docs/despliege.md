@@ -6,140 +6,107 @@
 
 ## 1. Introducción
 
-Este documento describe el proceso técnico necesario para desplegar el sistema web de Registro de Estudiantes, desarrollado con HTML5 y PHP.
+Este documento describe el proceso técnico necesario para desplegar el sistema web de Registro de Estudiantes, desarrollado con **HTML5 y JavaScript**.
 
-El sistema permite capturar, validar y mostrar información de alumnos de nuevo ingreso mediante formularios web.
+El sistema permite capturar, validar y mostrar información de alumnos de nuevo ingreso mediante formularios web, sin necesidad de un backend.
 
 ---
 
 ## 2. Objetivo
 
-Establecer un procedimiento claro y estructurado para la instalación, configuración y ejecución del sistema en un entorno local o productivo.
+Establecer un procedimiento claro y estructurado para la ejecución del sistema en un entorno local o productivo.
 
 ---
 
-## 3. Alcance
+## 3. Arquitectura del Sistema
 
-Esta guía aplica para:
-
-* Entornos locales (XAMPP, WAMP, Laragon)
-* Servidores web con soporte PHP
-* Implementaciones académicas
-
----
-
-## 4. Arquitectura del Sistema
-
-El sistema sigue una arquitectura simple cliente-servidor:
+El sistema sigue una arquitectura **cliente (frontend puro)**:
 
 * Cliente: Navegador web
-* Servidor: Apache + PHP
-* Comunicación: HTTP (POST)
+* Lógica: JavaScript (ejecución en el navegador)
+* Comunicación: No requiere servidor (local)
 
 ---
 
-## 5. Requisitos del Sistema
+## 4. Requisitos del Sistema
 
 ### Software
 
-* PHP 7.4 o superior
-* Servidor Apache o Nginx
-* Navegador web moderno
+* Navegador web moderno (Chrome, Edge, Firefox)
+* Editor de código: WebStorm (recomendado)
 
 ### Hardware (mínimo)
 
 * RAM: 2 GB
 * Procesador: Dual Core
-* Almacenamiento: 500 MB libres
+* Almacenamiento: 100 MB libres
 
 ---
 
-## 6. Estructura del Proyecto
+## 5. Estructura del Proyecto
 
 ```
 registro-estudiantes/
 │
 ├── registro.html
-├── procesar.php
+
 ```
+Tanto el Javascriot como el css estan dentro del mismo registro.html
+---
+
+## 6. Configuración del Entorno
+
+### Paso 1: Abrir en WebStorm
+
+1. Abrir WebStorm u otro programa que maneje programacion web
+2. Seleccionar **Open Project**
+3. Elegir la carpeta `registro-estudiantes`
 
 ---
 
-## 7. Instalación del Entorno
+## 7. Ejecución del Sistema
 
-### Paso 1: Instalar XAMPP
+### Opción 1: Directa (más simple)
 
-1. Descargar desde: https://www.apachefriends.org
-2. Instalar en el sistema
-3. Iniciar:
-
-   * Apache
+1. Abrir el archivo `registro.html`
+2. Ejecutar con navegador (doble clic o botón *Run*)
 
 ---
 
-## 8. Despliegue del Sistema
+### Opción 2: Servidor local de WebStorm (recomendado)
 
-### Paso 1: Copiar archivos
-
-Ubicar el proyecto en:
-
-```
-C:\xampp\htdocs\
-```
-
-Ejemplo:
-
-```
-C:\xampp\htdocs\registro-estudiantes
-```
+1. Clic derecho en `registro.html`
+2. Seleccionar **Open in Browser**
+3. WebStorm levantará un servidor local automático
 
 ---
 
-### Paso 2: Verificar estructura
-
-Asegurarse de que existan:
-
-* registro.html
-* procesar.php
-
----
-
-## 9. Ejecución del Sistema
-
-Abrir navegador y acceder a:
-
-```
-http://localhost/registro-estudiantes/registro.html
-```
-
----
-
-## 10. Flujo de Ejecución
+## 8. Flujo de Ejecución
 
 1. Usuario accede al formulario
 2. Ingresa datos
-3. Se envían mediante POST
-4. PHP procesa información
-5. Se muestra resumen en tabla
+3. JavaScript valida la información
+4. Se procesan los datos en el navegador
+5. Se muestran resultados en pantalla
 
 ---
 
-## 11. Pruebas del Sistema
+## 9. Pruebas del Sistema
 
 ### Prueba funcional
 
-| Campo    | Valor                                   |
-| -------- | --------------------------------------- |
-| Nombre   | Gerardo                                 |
-| Control  | 23456789                                |
-| Carrera  | Ing. Sistemas                           |
-| Semestre | 3                                       |
-| Correo   | [z@gmail.com]
+| Campo    | Valor      |
+| -------- |------------|
+| Nombre   | Humberto   |
+| Control  | 23456789   |
+| Carrera  | Ing. Sistemas |
+| Semestre | 8          |
+| Correo   | [z@gmail.com] |
 
 **Resultado esperado:**
 
-* Tabla con datos
-* Mensaje especial mostrado
+* Datos mostrados correctamente en pantalla
+* Validaciones funcionando
 
 ---
 
@@ -153,9 +120,44 @@ http://localhost/registro-estudiantes/registro.html
 
 ---
 
+## 10. Seguridad
 
+Se recomienda implementar:
 
+* Validación de datos en JavaScript
+* Uso de expresiones regulares (Regex)
+* Evitar inserción de código malicioso (XSS)
 
+---
 
+## 11. Despliegue en Producción
 
+### Opción 1: Hosting estático
+
+* Subir archivos a:
+
+    * GitHub Pages
+    * Netlify
+    * Vercel
+
+---
+
+### Opción 2: Servidor web
+
+* Subir archivos a:
+
+    * Apache o Nginx
+* No requiere configuración de backend
+
+---
+
+## ⚠️ 12. Problemas Comunes
+
+| Problema            | Solución                  |
+| ------------------- | ------------------------- |
+| No se ejecuta JS    | Revisar consola (F12)     |
+| Archivo no carga    | Verificar rutas           |
+| Error de validación | Revisar expresiones regex |
+
+---
 
