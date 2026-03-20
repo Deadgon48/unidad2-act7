@@ -5,60 +5,116 @@
     <title>Registro de Estudiantes</title>
     <style>
         body { font-family: sans-serif; margin: 20px; }
-        form { max-width: 400px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
+        .container { max-width: 500px; border: 1px solid #ccc; padding: 20px; border-radius: 8px; }
         div { margin-bottom: 15px; }
         label { display: block; font-weight: bold; }
-        input[type="text"], input[type="email"], select { width: 100%; padding: 8px; margin-top: 5px; }
-        .radio-group { margin-top: 5px; }
+        input[type="text"], input[type="email"], select { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; }
+        #resultado { display: none; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+        th { background-color: #eee; }
+        .mensaje-especial { color: blue; font-weight: bold; margin-bottom: 10px; }
     </style>
 </head>
 <body>
-<h2>Formulario de Nuevo Ingreso</h2>
-<form action="procesar.php" method="POST">
-    <div>
-        <label>Ingrese su nombre completo</label>
-        <input type="text" name="nombre" pattern="[A-Za-z\s]+" title="Solo letras" required>
-    </div>
 
-    <div>
-        <label>Ingrese su número de control</label>
-        <input type="text" name="n_control" pattern="[A-Za-z0-9]+" title="Se permiten números y letras (ej: L19120001)" required>
-    </div>
-
-    <div>
-        <label>Ingrese la carrera que desea cursar o esta cursando</label>
-        <select name="carrera" required>
-            <option value="">Seleccione una opción</option>
-            <option value="Ing. Sistemas">Ing. Sistemas</option>
-            <option value="Ing. Industrial">Ing. Industrial</option>
-            <option value="Ing. Gestión Empresarial">Ing. Gestión Empresarial</option>
-        </select>
-    </div>
-
-    <div>
-        <label>Ingrese su semestre</label>
-        <div class="radio-group">
-            <input type="radio" name="semestre" value="1" required> 1
-            <input type="radio" name="semestre" value="2"> 2
-            <input type="radio" name="semestre" value="3"> 3
-            <input type="radio" name="semestre" value="4"> 4
-            <input type="radio" name="semestre" value="5"> 5
-            <input type="radio" name="semestre" value="6"> 6 <br>
-            <input type="radio" name="semestre" value="7"> 7
-            <input type="radio" name="semestre" value="8"> 8
-            <input type="radio" name="semestre" value="9"> 9
-            <input type="radio" name="semestre" value="10"> 10
-            <input type="radio" name="semestre" value="11"> 11
-            <input type="radio" name="semestre" value="12"> 12
+<div class="container" id="form-container">
+    <h2>Formulario de Nuevo Ingreso</h2>
+    <form id="registroForm">
+        <div>
+            <label>Ingrese su nombre completo</label>
+            <input type="text" id="nombre" name="nombre" pattern="[A-Za-z\s]+" title="Solo se permiten letras y espacios" maxlength="100" required>
         </div>
-    </div>
+        <div>
+            <label>Ingrese su número de control</label>
+            <input type="text" id="n_control" name="n_control" pattern="[A-Za-z0-9]+" title="Se permiten números y letras (ej: L19120001)" maxlength="20" required>
+        </div>
+        <div>
+            <label>Carrera</label>
+            <select id="carrera" name="carrera" required>
+                <option value="">Seleccione una opción</option>
+                <option value="Ing. Sistemas">Ing. Sistemas</option>
+                <option value="Ing. Industrial">Ing. Industrial</option>
+                <option value="Ing. Gestión Empresarial">Ing. Gestión Empresarial</option>
+            </select>
+        </div>
+        <div>
+            <label>Semestre</label>
+            <div id="semestre-group">
+                <input type="radio" name="semestre" value="1" required> 1
+                <input type="radio" name="semestre" value="2"> 2
+                <input type="radio" name="semestre" value="3"> 3
+                <input type="radio" name="semestre" value="4"> 4
+                <input type="radio" name="semestre" value="5"> 5
+                <input type="radio" name="semestre" value="6"> 6 <br>
+                <input type="radio" name="semestre" value="7"> 7
+                <input type="radio" name="semestre" value="8"> 8
+                <input type="radio" name="semestre" value="9"> 9
+                <input type="radio" name="semestre" value="10"> 10
+                <input type="radio" name="semestre" value="11"> 11
+                <input type="radio" name="semestre" value="12"> 12
+            </div>
+        </div>
+        <div>
+            <label>Correo institucional</label>
+            <input type="email" id="correo" name="correo" maxlength="20" required>
+        </div>
+        <button type="submit">Registrar Alumno</button>
+    </form>
+</div>
 
-    <div>
-        <label>Ingrese su correo institucional</label>
-        <input type="email" name="correo" required>
-    </div>
+<div id="resultado" class="container">
+    <h1>Resumen de Registro</h1>
+    <div id="mensaje"></div>
+    <table>
+        <thead>
+        <tr><th>Campo</th><th>Valor</th></tr>
+        </thead>
+        <tbody id="tabla-body"></tbody>
+    </table>
+    <br>
+    <a href="#" onclick="location.reload()">Registrar otro alumno</a>
+</div>
 
-    <button type="submit">Registrar Alumno</button>
-</form>
+<script>
+    document.getElementById('registroForm').onsubmit = function(e) {
+        e.preventDefault();
+
+        const nombre = document.getElementById('nombre').value.trim();
+        const n_control = document.getElementById('n_control').value.trim();
+        const carrera = document.getElementById('carrera').value;
+        const correo = document.getElementById('correo').value.trim();
+        const semestreChecked = document.querySelector('input[name="semestre"]:checked');
+
+        // Validación extra: Verificar que ningún campo llegue vacío (Lógica de procesar.php)
+        if (!nombre || !n_control || !carrera || !correo || !semestreChecked) {
+            alert("Error: Todos los campos son obligatorios.");
+            return;
+        }
+
+        const semestre = semestreChecked.value;
+
+        // Lógica de Negocio: Mensaje especial para Sistemas
+        let mensajeHtml = "";
+        if (carrera === "Ing. Sistemas") {
+            mensajeHtml = "<p class='mensaje-especial'>¡Bienvenido al mundo de la computación funcional!</p>";
+        }
+
+        // Llenar tabla de resultados
+        const tablaBody = document.getElementById('tabla-body');
+        tablaBody.innerHTML = `
+            <tr><td>Nombre completo</td><td>${nombre}</td></tr>
+            <tr><td>Número de Control</td><td>${n_control}</td></tr>
+            <tr><td>Carrera</td><td>${carrera}</td></tr>
+            <tr><td>Semestre</td><td>${semestre}</td></tr>
+            <tr><td>Correo Institucional</td><td>${correo}</td></tr>
+        `;
+
+        document.getElementById('mensaje').innerHTML = mensajeHtml;
+        document.getElementById('form-container').style.display = 'none';
+        document.getElementById('resultado').style.display = 'block';
+    };
+</script>
+
 </body>
 </html>

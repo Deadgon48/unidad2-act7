@@ -47,16 +47,15 @@ Este diccionario documenta los elementos de datos del sistema de registro de est
 
 ### 3. carrera
 
-| Propiedad        | Valor |
-|------------------|------|
-| Nombre           | carrera |
-| Tipo de dato     | VARCHAR |
-| Longitud         | 50 |
-| Obligatorio      | Sí |
-| Descripción      | Carrera del estudiante |
-| Valores válidos  | Ing. Sistemas, Ing. Industrial, Ing. Gestión Empresarial |
-| Ejemplo          | Ing. Sistemas |
-| Regla de negocio | Debe seleccionarse una opción |
+| Propiedad             | Valor |
+|-----------------------|------|
+| Nombre                | carrera |
+| Tipo de dato          | VARCHAR |
+| Obligatorio           | Sí |
+| Descripción           | Carrera del estudiante |
+| Valores como opciones | Ing. Sistemas, Ing. Industrial, Ing. Gestión Empresarial |
+| Ejemplo               | Ing. Sistemas |
+| Regla de negocio      | Debe seleccionarse una opción |
 
 ---
 
@@ -92,7 +91,7 @@ Este diccionario documenta los elementos de datos del sistema de registro de est
 ## Reglas Generales
 
 - Todos los campos son obligatorios
-- Validación en frontend (HTML5) y backend (PHP)
+- Validación en frontend (HTML5 y javascript) 
 - No se permite envío de datos vacíos
 - Validación de seguridad recomendada: sanitización (`htmlspecialchars()`)
 
