@@ -1,47 +1,32 @@
-**"Proyecto de Humberto - ISC"**
+# Sistema de Registro de Estudiantes (Nuevo Ingreso)
 
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+Este proyecto es una practica web que esta diseñada para la gestión y captura de datos de alumnos de nuevo ingreso. 
+Permite la recolección de información personal, académica y de contacto de forma basica, procesando los datos mediante 
+una arquitectura Cliente-Servidor básica.
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+## Funcionalidades
+- **Interfaz de Captura:** Formulario en HTML5 con validaciones de tipo y patrón.
+- **Procesamiento en Servidor:** Script en PHP para la recepción y visualización de datos mediante `$_POST`.
+- **Lógica de Negocio:** Mensajes de bienvenida personalizados según la carrera, seleccionada, en este caso solo la de sistemas.
+- **Visualización:** Generación de tablas con el resumen de la información capturada.
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+## Stack Tecnológico
+- **Frontend:** HTML5 / CSS3
+- **Backend:** PHP 8.x
+- **Arquitectura:** Modelo C4 (Documentación automatizada)
 
----
+## Documentación Técnica (Arquitectura como Código)
+La arquitectura del sistema, el diccionario de datos y la guía de despliegue 
+están disponibles en la pagina de GitHub Pages, 
+la cual se actualiza automáticamente mediante un Pipeline.
 
-## Edit a file
+**[Documentación del Proyecto] (https://Dadgon48.github.io/unidad2-act7/)**
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
-
----
-
-## Create a file
-
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+## Estructura del Repositorio
+- `registro.html`: Formulario de entrada.
+- `procesar.php`: Lógica de procesamiento de datos.
+- `/docs`: Archivos fuente de la documentación (Markdown y uno con codigo Mermaid).
+- `.github/workflows/deploy.yaml`: Configuración de la automatización del despliegue.
 
 ---
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+**Autor:** Humberto Carlos Acosta Comparan
