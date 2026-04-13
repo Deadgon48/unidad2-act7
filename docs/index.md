@@ -6,10 +6,10 @@ Bienvenido a la documentación técnica del Sistema de Registro de Estudiantes.
 
 ![Diagrama de Contexto C4](./diagrama actualizado.png)
 
-Secciones
+## Secciones
 
-Diccionario de datos:
+### Diccionario de datos:
 https://deadgon48.github.io/unidad2-act7/datos
 
-Guía de Despliegue:
+### Guía de Despliegue:
 https://deadgon48.github.io/unidad2-act7/despliege
