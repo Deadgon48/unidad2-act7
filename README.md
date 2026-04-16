@@ -1,5 +1,7 @@
 # Sistema de Registro de Estudiantes (Nuevo Ingreso)
 
+![Estado del Build](https://github.com/Deadgon48/unidad2-act7/actions/workflows/ci-docs.yml/badge.svg)
+
 Este proyecto es una practica web que esta
 diseñada para la gestión y captura de datos
 de alumnos de nuevo ingreso.
