@@ -51,13 +51,15 @@ El sistema sigue una arquitectura **cliente (frontend puro)**:
 
 ## 5. Estructura del Proyecto
 
-```
+```text
 registro-estudiantes/
 │
 ├── registro.html
 ```
-Tanto el Javascriot como el css 
-estan dentro del mismo registro.html
+
+Tanto el Javascriot
+como el css estan dentro
+del mismo registro.html
 
 ## 6. Configuración del Entorno
 
@@ -141,9 +143,9 @@ Se recomienda implementar:
 
 * Subir archivos a:
 
-    * GitHub Pages
-    * Netlify
-    * Vercel
+  * GitHub Pages
+  * Netlify
+  * Vercel
 
 ---
 
@@ -151,8 +153,8 @@ Se recomienda implementar:
 
 * Subir archivos a:
 
-    * Apache o Nginx
-* No requiere configuración de backend
+  * Apache o Nginx
+  * No requiere configuración de backend
 
 ---
 
@@ -165,4 +167,3 @@ Se recomienda implementar:
 | Error de validación | Revisar expresiones regex |
 
 ---
-
