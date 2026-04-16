@@ -4,7 +4,8 @@ Diccionario de datos
 
 ## Descripción
 
-Este diccionario documenta los elementos de datos del sistema de registro de estudiantes, 
+Este diccionario documenta los elementos de 
+datos del sistema de registro de estudiantes, 
 incluyendo definiciones, tipos, restricciones y reglas de negocio.
 
 ---
@@ -57,7 +58,7 @@ incluyendo definiciones, tipos, restricciones y reglas de negocio.
 | Tipo de dato          | VARCHAR |
 | Obligatorio           | Sí |
 | Descripción           | Carrera del estudiante |
-| Valores como opciones | Ing. Sistemas, Ing. Industrial, Ing. Gestión Empresarial |
+| Valores como opciones | Ing. Sistemas, <br/>Ing. Industrial, <br/>Ing. Gestión Empresarial |
 | Ejemplo               | Ing. Sistemas |
 | Regla de negocio      | Debe seleccionarse una opción |
 
@@ -87,7 +88,7 @@ incluyendo definiciones, tipos, restricciones y reglas de negocio.
 | Obligatorio      | Sí                               |
 | Descripción      | Correo electrónico institucional |
 | Formato          | email válido                     |
-| Ejemplo          | >alumno@correo.comZ              |
+| Ejemplo          | >alumno@correo.com>              |
 | Regla de negocio | Debe cumplir formato de correo   |
 
 ---
@@ -95,7 +96,7 @@ incluyendo definiciones, tipos, restricciones y reglas de negocio.
 ## Reglas Generales
 
 - Todos los campos son obligatorios
-- Validación en frontend (HTML5 y javascript) 
+- Validación en frontend (HTML5 y javascript)
 - No se permite envío de datos vacíos
 - Validación de seguridad recomendada: sanitización (`htmlspecialchars()`)
 
