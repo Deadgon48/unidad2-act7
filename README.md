@@ -1,6 +1,6 @@
 # Sistema de Registro de Estudiantes (Nuevo Ingreso)
 
-![Estado del Build](https://github.com/Dadgon48/unidad2-act7/actions/workflows/ci-docs.yaml/badge.svg)
+[![CI de Verificación de Documentación Técnica](https://github.com/Deadgon48/unidad2-act7/actions/workflows/ci-docs.yaml/badge.svg)](https://github.com/Deadgon48/unidad2-act7/actions/workflows/ci-docs.yaml)
 
 Este proyecto es una practica web que esta
 diseñada para la gestión y captura de datos
