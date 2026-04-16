@@ -1,6 +1,6 @@
 # Sistema de Registro de Estudiantes (Nuevo Ingreso)
 
-![Estado del Build](https://github.com/Dadgon48/unidad2-act7/actions/workflows/deploy.yaml/badge.svg)
+![Estado del Build](https://github.com/Dadgon48/unidad2-act7/actions/workflows/ci-docs.yaml/badge.svg)
 
 Este proyecto es una practica web que esta
 diseñada para la gestión y captura de datos
