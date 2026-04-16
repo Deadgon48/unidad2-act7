@@ -1,7 +1,11 @@
 # Diccionario de Datos - Sistema de Registro de Estudiantes
 
+Diccionario de datos
+
 ## Descripción
-Este diccionario documenta los elementos de datos del sistema de registro de estudiantes, incluyendo definiciones, tipos, restricciones y reglas de negocio.
+
+Este diccionario documenta los elementos de datos del sistema de registro de estudiantes, 
+incluyendo definiciones, tipos, restricciones y reglas de negocio.
 
 ---
 
@@ -75,16 +79,16 @@ Este diccionario documenta los elementos de datos del sistema de registro de est
 
 ### 5. correo
 
-| Propiedad        | Valor |
-|------------------|------|
-| Nombre           | correo |
-| Tipo de dato     | VARCHAR |
-| Longitud         | 100 |
-| Obligatorio      | Sí |
+| Propiedad        | Valor                            |
+|------------------|----------------------------------|
+| Nombre           | correo                           |
+| Tipo de dato     | VARCHAR                          |
+| Longitud         | 100                              |
+| Obligatorio      | Sí                               |
 | Descripción      | Correo electrónico institucional |
-| Formato          | email válido |
-| Ejemplo          | alumno@correo.com |
-| Regla de negocio | Debe cumplir formato de correo |
+| Formato          | email válido                     |
+| Ejemplo          | >alumno@correo.comZ              |
+| Regla de negocio | Debe cumplir formato de correo   |
 
 ---
 

@@ -6,15 +6,18 @@
 
 ## 1. Introducción
 
-Este documento describe el proceso técnico necesario para desplegar el sistema web de Registro de Estudiantes, desarrollado con **HTML5 y JavaScript**.
+Este documento describe el proceso técnico necesario para desplegar el sistema web de 
+Registro de Estudiantes, desarrollado con **HTML5 y JavaScript**.
 
-El sistema permite capturar, validar y mostrar información de alumnos de nuevo ingreso mediante formularios web, sin necesidad de un backend.
+El sistema permite capturar, validar y mostrar información de alumnos de nuevo ingreso 
+mediante formularios web, sin necesidad de un backend.
 
 ---
 
 ## 2. Objetivo
 
-Establecer un procedimiento claro y estructurado para la ejecución del sistema en un entorno local o productivo.
+Establecer un procedimiento claro y estructurado para la ejecución del sistema en un 
+entorno local o productivo.
 
 ---
 
@@ -49,7 +52,6 @@ El sistema sigue una arquitectura **cliente (frontend puro)**:
 registro-estudiantes/
 │
 ├── registro.html
-
 ```
 Tanto el Javascriot como el css estan dentro del mismo registro.html
 ---
