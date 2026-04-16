@@ -56,8 +56,8 @@ registro-estudiantes/
 │
 ├── registro.html
 ```
-Tanto el Javascriot como el css estan dentro del mismo registro.html
----
+Tanto el Javascriot como el css 
+estan dentro del mismo registro.html
 
 ## 6. Configuración del Entorno
 
