@@ -58,7 +58,7 @@ incluyendo definiciones, tipos, restricciones y reglas de negocio.
 | Tipo de dato          | VARCHAR |
 | Obligatorio           | Sí |
 | Descripción           | Carrera del estudiante |
-| Valores como opciones | Ing. Sistemas, Ing. Industrial, Ing. Gestión Empresarial |
+| Valores como opciones | Ing. Sistemas, Industrial, Gestión Empresarial |
 | Ejemplo               | Ing. Sistemas |
 | Regla de negocio      | Debe seleccionarse una opción |
 

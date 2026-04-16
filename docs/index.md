@@ -12,10 +12,10 @@ Bienvenido a la documentación técnica del Sistema de Registro de Estudiantes.
 
 ![Sistema de registro de estudiantes](../index.html)
 
-### Diccionario de datos:
+### Diccionario de datos
 
-https://deadgon48.github.io/unidad2-act7/datos
+<https://deadgon48.github.io/unidad2-act7/datos>
 
-### Guía de Despliegue:
+### Guía de Despliegue
 
-https://deadgon48.github.io/unidad2-act7/despliege
+<https://deadgon48.github.io/unidad2-act7/despliege>
